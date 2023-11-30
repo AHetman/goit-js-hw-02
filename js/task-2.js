@@ -1,11 +1,10 @@
 "use strict";
 function formatMessage(message, maxLength) {
-  let strict;
   if (message.length <= maxLength) {
     return message;
   } else {
-    strict = message.slice(0, maxLength);
-    return strict + `...`;
+    const truncatedMessage = message.slice(0, maxLength);
+    return truncatedMessage + `...`;
   }
 }
 

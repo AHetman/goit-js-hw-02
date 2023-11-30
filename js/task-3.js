@@ -1,13 +1,9 @@
 "use strict";
 function checkForSpam(message) {
-  if (
-    message.toLowerCase().includes("spam") ||
-    message.toLowerCase().includes("sale")
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+  const messageToLowerCase = message.toLowerCase();
+  return (
+    messageToLowerCase.includes("spam") || messageToLowerCase.includes("sale")
+  );
 }
 
 console.log(checkForSpam("Latest technology news")); // false
